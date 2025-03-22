@@ -18,17 +18,17 @@ var config_data = `
     { "name": "Height",
       "code": "hei",
       "type": "number",
-      "defaultValue": "0"
+      "defaultValue": ""
     },
     { "name": "Width",
       "code": "wid",
       "type": "number",
-      "defaultValue": "0"
+      "defaultValue": ""
     },
     { "name": "Weight",
       "code": "wei",
       "type": "number",
-      "defaultValue": "0"
+      "defaultValue": ""
     },
     { "name": "Drivetrain Motor",
       "code": "mot",
@@ -39,7 +39,7 @@ var config_data = `
         "Kraken": "Kraken<br>",
         "Other": "Other<br>"
       },
-      "defaultValue":"x"
+      "defaultValue":""
     },
     { "name": "# of Batteries",
       "code": "nob",
@@ -78,7 +78,7 @@ var config_data = `
         "Both": "Both<br>",
         "None": "None<br>"
       },
-      "defaultValue":"n"
+      "defaultValue":""
     },
     { "name": "Algae Pickup",
       "code": "algaep",
@@ -89,10 +89,24 @@ var config_data = `
         "Both": "Both<br>",
         "None": "None<br>"
       },
-      "defaultValue":"n"
+      "defaultValue":"K"
     },
     { "name": "Algae and Coral Simultaneously?",
       "code": "aib",
+      "type": "bool"
+    },
+    { "name": "Hanging",
+      "code": "han",
+      "type": "radio",
+      "choices": {
+        "Deep Cage": "Deep Cage<br>",
+        "Shallow Cage": "Shallow Cage<br>",
+        "Can't Hang": "Can't Hang<br>"
+      },
+      "defaultValue":""
+    },
+    { "name": "Willing to Defend?",
+      "code": "def",
       "type": "bool"
     },
     { "name": "Human Player Preference",
@@ -103,10 +117,16 @@ var config_data = `
         "Coral Station": "Coral Statation<br>",
         "Neither": "No Preference<br>"
       },
-      "defaultValue":"n"
+      "defaultValue":""
     },
     { "name": "Describe Autonomous",
       "code": "aut",
+      "type": "text",
+      "size": 20,
+      "maxSize": 250
+    },
+    { "name": "Known Robot Problems",
+      "code": "Pro",
       "type": "text",
       "size": 20,
       "maxSize": 250
