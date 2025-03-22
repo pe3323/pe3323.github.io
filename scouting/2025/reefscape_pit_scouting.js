@@ -92,7 +92,7 @@ var config_data = `
       "defaultValue":"K"
     },
     { "name": "Algae and Coral Simultaneously?",
-      "code": "aib",
+      "code": "aac",
       "type": "bool"
     },
     { "name": "Hanging",
