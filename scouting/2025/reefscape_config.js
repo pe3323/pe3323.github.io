@@ -112,10 +112,21 @@ var config_data = `
       "type": "counter"
     },
     { "name": "Coral Pickup From",
-      "code": "tpu",
+      "code": "cpu",
       "type": "radio",
       "choices": {
         "Coral Station": "Coral Station<br>",
+        "Floor": "Floor<br>",
+        "Both": "Both<br>",
+        "Not Attempted": "Not Attempted"
+      },
+      "defaultValue": "Not Attempted"
+    },
+    { "name": "Algae Pickup From",
+      "code": "apu",
+      "type": "radio",
+      "choices": {
+        "Coral Station": "Reef<br>",
         "Floor": "Floor<br>",
         "Both": "Both<br>",
         "Not Attempted": "Not Attempted"
