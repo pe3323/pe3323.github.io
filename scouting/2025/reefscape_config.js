@@ -22,11 +22,11 @@ var config_data = `
       "code": "l",
       "type": "level",
       "choices": {
-        "q": "Quals<br>",
-        "sf": "Semifinals<br>",
-        "f": "Finals"
+        "Quals": "Quals<br>",
+        "Semifinals": "Semifinals<br>",
+        "Finals": "Finals"
       },
-      "defaultValue": "q",
+      "defaultValue": "Finals",
       "required": "true"
     },
     { "name": "Match #",
@@ -58,7 +58,7 @@ var config_data = `
   ],
   "auton": [
     { "name": "Leave Starting Line",
-      "code": "al",
+      "code": "lsl",
       "type": "bool"
     },
     { "name": "Coral L1",
@@ -78,11 +78,11 @@ var config_data = `
       "type": "counter"
     },
     { "name": "Processor Score",
-      "code": "aps",
+      "code": "prs",
       "type": "counter"
     },
     { "name": "Barge Score",
-      "code": "ans",
+      "code": "brs",
       "type": "counter"
     }
   ],
@@ -111,7 +111,7 @@ var config_data = `
       "code": "tns",
       "type": "counter"
     },
-    { "name": "Pickup From",
+    { "name": "Coral Pickup From",
       "code": "tpu",
       "type": "radio",
       "choices": {
@@ -120,7 +120,7 @@ var config_data = `
         "Both": "Both<br>",
         "Not Attempted": "Not Attempted"
       },
-      "defaultValue": "x"
+      "defaultValue": "Not Attempted"
     },
     { "name": "Scored in<br>Opponent<br>Processor",
       "code": "opp",
