@@ -172,10 +172,10 @@ var config_data = `
       "code": "ds",
       "type": "radio",
       "choices": {
-        "n": "Not Effective<br>",
-        "a": "Average<br>",
-        "v": "Very Effective<br>",
-        "x": "Not Observed"
+        "Not Effective": "Not Effective<br>",
+        "Average": "Average<br>",
+        "Very Effective": "Very Effective<br>",
+        "Not Observed": "Not Observed"
       },
       "defaultValue": "x"
     },
@@ -183,11 +183,11 @@ var config_data = `
       "code": "dr",
       "type": "radio",
       "choices": {
-        "b": "Below Average<br>",
-        "a": "Average<br>",
-        "g": "Good<br>",
-        "e": "Excellent<br>",
-        "x": "Did not play defense"
+        "Below Average": "Below Average<br>",
+        "Average": "Average<br>",
+        "Good": "Good<br>",
+        "Excellent": "Excellent<br>",
+        "Did not play defense": "Did not play defense"
       },
       "defaultValue": "x"
     },
