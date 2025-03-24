@@ -3,7 +3,6 @@ var config_data = `
   "dataFormat": "tsv",
   "title": "Scouting PASS 2025",
   "page_title": "REEFSCAPE",
-  "checkboxAs": "10",
   "prematch": [
     { "name": "Scouter Initials",
       "code": "s",
@@ -126,7 +125,7 @@ var config_data = `
       "code": "apu",
       "type": "radio",
       "choices": {
-        "Coral Station": "Reef<br>",
+        "Reef": "Reef<br>",
         "Floor": "Floor<br>",
         "Both": "Both<br>",
         "Not Attempted": "Not Attempted"
