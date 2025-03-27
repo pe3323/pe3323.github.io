@@ -138,7 +138,7 @@ var config_data = `
     }
   ],
   "endgame": [
-    { "name": "Barge Timer",
+    { "name": "Time to hang",
       "code": "ebt",
       "type": "timer"
     },
