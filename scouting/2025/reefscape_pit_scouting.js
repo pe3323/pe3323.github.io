@@ -15,20 +15,23 @@ var config_data = `
       "code": "t",
       "type": "number"
     },
-    { "name": "Height",
+    { "name": "Height (Feet & Inches)",
       "code": "hei",
-      "type": "number",
-      "defaultValue": ""
+      "type": "text",
+      "size": 20,
+      "maxSize": 250
     },
-    { "name": "Width",
+    { "name": "Width (Feet & Inches)",
       "code": "wid",
-      "type": "number",
-      "defaultValue": ""
+      "type": "text",
+      "size": 20,
+      "maxSize": 250
     },
     { "name": "Weight",
       "code": "wei",
-      "type": "number",
-      "defaultValue": ""
+      "type": "text",
+      "size": 20,
+      "maxSize": 250
     },
     { "name": "Drivetrain Motor",
       "code": "mot",
