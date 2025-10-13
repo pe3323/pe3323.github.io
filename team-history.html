@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="FRC Team #3323 Potential Energy - 17 years of robotics excellence, innovation, and FIRST competition history.">
+  <meta name="keywords" content="FRC, Team 3323, Potential Energy, robotics history, FIRST competition, timeline">
+  <meta name="author" content="FRC Team #3323 Potential Energy">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'team-purple': '#5b21b6',
+            'team-purple-dark': '#4c1d95',
+            'team-purple-light': '#7c3aed',
+            'team-red': '#dc2626',
+            'team-black': '#0f0f0f',
+          },
+          fontFamily: {
+            'sans': ['Inter', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom CSS for Timeline -->
+  <style>
+    .timeline-item {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease-in-out;
+    }
+    
+    .timeline-item.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .timeline-line {
+      background: linear-gradient(to bottom, #5b21b6, #dc2626);
+    }
+  </style>
+  
+  <title>Team History - FRC Team #3323 Potential Energy</title>
+</head>
+<body class="bg-white text-gray-900 font-sans">
+
+  <!-- Header -->
+  <header class="bg-white shadow-lg fixed top-0 w-full z-50">
+    <nav class="container mx-auto px-4 py-3">
+      <div class="flex items-center justify-between">
+        <!-- Logo and Team Name -->
+        <div class="flex items-center space-x-3">
+          <img src="images/logo.png" alt="Potential Energy #3323 Logo" class="h-10 w-10">
+          <div>
+            <h1 class="text-xl font-bold text-team-purple">Potential Energy</h1>
+            <p class="text-sm text-gray-600">#3323</p>
+          </div>
+        </div>
+        
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="index.html" class="text-gray-700 hover:text-team-purple transition-colors duration-200 font-medium">Home</a>
+          <a href="index.html#about" class="text-gray-700 hover:text-team-purple transition-colors duration-200 font-medium">About</a>
+          <a href="index.html#events" class="text-gray-700 hover:text-team-purple transition-colors duration-200 font-medium">Events</a>
+          <a href="innovation-lab.html" class="text-gray-700 hover:text-team-purple transition-colors duration-200 font-medium">Innovation Lab</a>
+          <a href="team-history.html" class="text-team-purple font-semibold">Team History</a>
+          <a href="index.html#contact" class="bg-team-purple text-white px-6 py-2 rounded-lg hover:bg-team-purple-dark transition-colors duration-200 font-medium">Contact</a>
+        </div>
+        
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-button" class="md:hidden text-gray-700 hover:text-team-purple focus:outline-none">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
+      
+      <!-- Mobile Navigation -->
+      <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+        <div class="flex flex-col space-y-3">
+          <a href="index.html" class="text-gray-700 hover:text-team-purple transition-colors duration-200 font-medium">Home</a>
+          <a href="index.html#about" class="text-gray-700 hover:text-team-purple transition-colors duration-200 font-medium">About</a>
+          <a href="index.html#events" class="text-gray-700 hover:text-team-purple transition-colors duration-200 font-medium">Events</a>
+          <a href="innovation-lab.html" class="text-gray-700 hover:text-team-purple transition-colors duration-200 font-medium">Innovation Lab</a>
+          <a href="team-history.html" class="text-team-purple font-semibold">Team History</a>
+          <a href="index.html#contact" class="bg-team-purple text-white px-6 py-2 rounded-lg hover:bg-team-purple-dark transition-colors duration-200 font-medium text-center">Contact</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-team-purple to-team-purple-dark text-white pt-24 pb-16">
+    <div class="container mx-auto px-4 text-center">
+      <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+        18 Years of
+        <span class="text-yellow-300">Excellence</span>
+      </h1>
+      <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed">
+        From our founding in 2008 to today, Team #3323 Potential Energy has been pushing the boundaries of robotics innovation through every FIRST challenge.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <a href="#timeline" class="bg-white text-team-purple px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors duration-200 font-semibold text-lg inline-flex items-center">
+          <i class="fas fa-history mr-2"></i>
+          Explore Our Journey
+        </a>
+        <a href="#achievements" class="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-team-purple transition-colors duration-200 font-semibold text-lg inline-flex items-center">
+          <i class="fas fa-trophy mr-2"></i>
+          View Achievements
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Overview -->
+  <section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="grid md:grid-cols-4 gap-8 text-center">
+        <div class="bg-white rounded-xl shadow-lg p-8">
+          <div class="text-4xl font-bold text-team-purple mb-2">18</div>
+          <div class="text-gray-600 font-medium">Years of Competition</div>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg p-8">
+          <div class="text-4xl font-bold text-team-red mb-2">50+</div>
+          <div class="text-gray-600 font-medium">Regional Events</div>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg p-8">
+          <div class="text-4xl font-bold text-team-purple mb-2">200+</div>
+          <div class="text-gray-600 font-medium">Students Mentored</div>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg p-8">
+          <div class="text-4xl font-bold text-team-red mb-2">15+</div>
+          <div class="text-gray-600 font-medium">Awards Won</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline Section -->
+  <section id="timeline" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-team-black mb-6">Our Journey Through Time</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Every year brought new challenges, innovations, and growth as we evolved alongside the FIRST Robotics Competition.
+        </p>
+      </div>
+
+      <!-- Timeline Container -->
+      <div class="relative max-w-6xl mx-auto">
+        <!-- Timeline Line -->
+        <div class="absolute left-1/2 transform -translate-x-1/2 w-1 timeline-line h-full"></div>
+
+        <!-- 2008 - FIRST Overdrive -->
+        <div class="timeline-item relative flex items-center mb-16">
+          <div class="flex-1 pr-8 text-right">
+            <!-- Empty space for alternating layout -->
+          </div>
+          <div class="absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-team-purple rounded-full flex items-center justify-center text-white font-bold text-xl z-10">
+            08
+          </div>
+          <div class="flex-1 pl-8">
+            <div class="bg-blue-50 rounded-xl p-6 shadow-lg border-l-4 border-blue-500">
+              <h4 class="text-xl font-bold text-blue-700 mb-2">FIRST Overdrive</h4>
+              <p class="text-blue-600 mb-2">Racing robots around a track while manipulating trackballs over and under overpasses.</p>
+              <div class="text-sm text-blue-500">
+                <i class="fas fa-gamepad mr-2"></i>Track-based racing game
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2009 - Lunacy -->
+        <div class="timeline-item relative flex items-center mb-16">
+          <div class="flex-1 pr-8 text-right">
+            <div class="bg-green-50 rounded-xl p-6 shadow-lg border-r-4 border-green-500">
+              <h4 class="text-xl font-bold text-green-700 mb-2">Lunacy</h4>
+              <p class="text-green-600 mb-2">Robots played on a low-friction "moon surface" scoring with orbit balls and super cells.</p>
+              <div class="text-sm text-green-500">
+                <i class="fas fa-moon mr-2"></i>Low-friction surface challenge
+              </div>
+            </div>
+          </div>
+          <div class="absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-team-red rounded-full flex items-center justify-center text-white font-bold text-xl z-10">
+            09
+          </div>
+          <div class="flex-1 pl-8">
+            <!-- Empty space for alternating layout -->
+          </div>
+        </div>
+
+        <!-- 2010 - Breakaway -->
+        <div class="timeline-item relative flex items-center mb-16">
+          <div class="flex-1 pr-8 text-right">
+            <!-- Empty space for alternating layout -->
+          </div>
+          <div class="absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-team-purple rounded-full flex items-center justify-center text-white font-bold text-xl z-10">
+            10
+          </div>
+          <div class="flex-1 pl-8">
+            <div class="bg-purple-50 rounded-xl p-6 shadow-lg border-l-4 border-purple-500">
+              <h4 class="text-xl font-bold text-purple-700 mb-2">Breakaway</h4>
+              <p class="text-purple-600 mb-2">Soccer-inspired game with robots kicking balls into goals while navigating around bumps.</p>
+              <div class="text-sm text-purple-500">
+                <i class="fas fa-futbol mr-2"></i>Soccer-style gameplay
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2011 - Logo Motion -->
+        <div class="timeline-item relative flex items-center mb-16">
+          <div class="flex-1 pr-8 text-right">
+            <div class="bg-red-50 rounded-xl p-6 shadow-lg border-r-4 border-red-500">
+              <h4 class="text-xl font-bold text-red-700 mb-2">Logo Motion</h4>
+              <p class="text-red-600 mb-2">Robots hung inflatable shapes on pegs to form the FIRST logo while scoring ubertube goals.</p>
+              <div class="text-sm text-red-500">
+                <i class="fas fa-shapes mr-2"></i>Logo formation challenge
+              </div>
+            </div>
+          </div>
+          <div class="absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-team-red rounded-full flex items-center justify-center text-white font-bold text-xl z-10">
+            11
+          </div>
+          <div class="flex-1 pl-8">
+            <!-- Empty space for alternating layout -->
+          </div>
+        </div>
+
+        <!-- 2012 - Rebound Rumble -->
+        <div class="timeline-item relative flex items-center mb-16">
+          <div class="flex-1 pr-8 text-right">
+            <!-- Empty space for alternating layout -->
+          </div>
+          <div class="absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-team-purple rounded-full flex items-center justify-center text-white font-bold text-xl z-10">
+            12
+          </div>
+          <div class="flex-1 pl-8">
+            <div class="bg-orange-50 rounded-xl p-6 shadow-lg border-l-4 border-orange-500">
+              <h4 class="text-xl font-bold text-orange-700 mb-2">Rebound Rumble</h4>
+              <p class="text-orange-600 mb-2">Basketball-inspired game with robots shooting balls into hoops at various heights.</p>
+              <div class="text-sm text-orange-500">
+                <i class="fas fa-basketball-ball mr-2"></i>Basketball mechanics
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2013 - Ultimate Ascent -->
+        <div class="timeline-item relative flex items-center mb-16">
+          <div class="flex-1 pr-8 text-right">
+            <div class="bg-yellow-50 rounded-xl p-6 shadow-lg border-r-4 border-yellow-500">
+              <h4 class="text-xl font-bold text-yellow-700 mb-2">Ultimate Ascent</h4>
+              <p class="text-yellow-600 mb-2">Frisbee-shooting robots aimed for goals at multiple levels with climbing pyramid finale.</p>
+              <div class="text-sm text-yellow-500">
+                <i class="fas fa-mountain mr-2"></i>Climbing and shooting
+              </div>
+            </div>
+          </div>
+          <div class="absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-team-red rounded-full flex items-center justify-center text-white font-bold text-xl z-10">
+            13
+          </div>
+          <div class="flex-1 pl-8">
+            <!-- Empty space for alternating layout -->
+          </div>
+        </div>
+
+        <!-- 2014 - Aerial Assist -->
+        <div class="timeline-item relative flex items-center mb-16">
+          <div class="flex-1 pr-8 text-right">
+            <!-- Empty space for alternating layout -->
+          </div>
+          <div class="absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-team-purple rounded-full flex items-center justify-center text-white font-bold text-xl z-10">
+            14
+          </div>
+          <div class="flex-1 pl-8">
+            <div class="bg-teal-50 rounded-xl p-6 shadow-lg border-l-4 border-teal-500">
+              <h4 class="text-xl font-bold text-teal-700 mb-2">Aerial Assist</h4>
+              <p class="text-teal-600 mb-2">Emphasized alliance cooperation with ball passing between robots and shared scoring goals.</p>
+              <div class="text-sm text-teal-500">
+                <i class="fas fa-people-arrows mr-2"></i>Cooperative gameplay
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2015 - Recycle Rush -->
+        <div class="timeline-item relative flex items-center mb-16">
+          <div class="flex-1 pr-8 text-right">
+            <div class="bg-green-50 rounded-xl p-6 shadow-lg border-r-4 border-green-500">
+              <h4 class="text-xl font-bold text-green-700 mb-2">Recycle Rush</h4>
+              <p class="text-green-600 mb-2">Stacking and sorting challenge with totes, bins, and pool noodles ("litter") without defense.</p>
+              <div class="text-sm text-green-500">
+                <i class="fas fa-recycle mr-2"></i>Stacking mechanics
+              </div>
+            </div>
+          </div>
+          <div class="absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-team-red rounded-full flex items-center justify-center text-white font-bold text-xl z-10">
+            15
+          </div>
+          <div class="flex-1 pl-8">
+            <!-- Empty space for alternating layout -->
+          </div>
+        </div>
+
+        <!-- 2016 - FIRST Stronghold -->
+        <div class="timeline-item relative flex items-center mb-16">
+          <div class="flex-1 pr-8 text-right">
+            <!-- Empty space for alternating layout -->
+          </div>
+          <div class="absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-team-purple rounded-full flex items-center justify-center text-white font-bold text-xl z-10">
+            16
+          </div>
+          <div class="flex-1 pl-8">
+            <div class="bg-gray-800 text-white rounded-xl p-6 shadow-lg border-l-4 border-gray-600">
+              <h4 class="text-xl font-bold mb-2">FIRST Stronghold</h4>
+              <p class="text-gray-300 mb-2">Medieval-themed game with obstacle crossing, ball shooting, and tower siege mechanics.</p>
+              <div class="text-sm text-gray-400">
+                <i class="fas fa-chess-rook mr-2"></i>Medieval siege theme
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2017 - FIRST Steamworks -->
+        <div class="timeline-item relative flex items-center mb-16">
+          <div class="flex-1 pr-8 text-right">
+            <div class="bg-amber-50 rounded-xl p-6 shadow-lg border-r-4 border-amber-500">
+              <h4 class="text-xl font-bold text-amber-700 mb-2">FIRST Steamworks</h4>
+              <p class="text-amber-600 mb-2">Steampunk-themed game with fuel delivery, gear placement, and climbing mechanics.</p>
+              <div class="text-sm text-amber-500">
+                <i class="fas fa-cogs mr-2"></i>Steampunk mechanics
+              </div>
+            </div>
+          </div>
+          <div class="absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-team-red rounded-full flex items-center justify-center text-white font-bold text-xl z-10">
+            17
+          </div>
+          <div class="flex-1 pl-8">
+            <!-- Empty space for alternating layout -->
+          </div>
+        </div>
+
+        <!-- 2018 - FIRST Power Up -->
+        <div class="timeline-item relative flex items-center mb-16">
+          <div class="flex-1 pr-8 text-right">
+            <!-- Empty space for alternating layout -->
+          </div>
+          <div class="absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-team-purple rounded-full flex items-center justify-center text-white font-bold text-xl z-10">
+            18
+          </div>
+          <div class="flex-1 pl-8">
+            <div class="bg-yellow-50 rounded-xl p-6 shadow-lg border-l-4 border-yellow-500">
+              <h4 class="text-xl font-bold text-yellow-700 mb-2">FIRST Power Up</h4>
+              <p class="text-yellow-600 mb-2">Retro arcade game with cube placement on switches and scales for point control.</p>
+              <div class="text-sm text-yellow-500">
+                <i class="fas fa-gamepad mr-2"></i>Arcade game theme
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2019 - Destination: Deep Space -->
+        <div class="timeline-item relative flex items-center mb-16">
+          <div class="flex-1 pr-8 text-right">
+            <div class="bg-indigo-50 rounded-xl p-6 shadow-lg border-r-4 border-indigo-500">
+              <h4 class="text-xl font-bold text-indigo-700 mb-2">Destination: Deep Space</h4>
+              <p class="text-indigo-600 mb-2">Space-themed game with cargo and hatch panel placement on rocket ships and cargo holds.</p>
+              <div class="text-sm text-indigo-500">
+                <i class="fas fa-rocket mr-2"></i>Space exploration theme
+              </div>
+            </div>
+          </div>
+          <div class="absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-team-red rounded-full flex items-center justify-center text-white font-bold text-xl z-10">
+            19
+          </div>
+          <div class="flex-1 pl-8">
+            <!-- Empty space for alternating layout -->
+          </div>
+        </div>
+
+        <!-- 2020 - Infinite Recharge -->
+        <div class="timeline-item relative flex items-center mb-16">
+          <div class="flex-1 pr-8 text-right">
+            <!-- Empty space for alternating layout -->
+          </div>
+          <div class="absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-team-purple rounded-full flex items-center justify-center text-white font-bold text-xl z-10">
+            20
+          </div>
+          <div class="flex-1 pl-8">
+            <div class="bg-blue-50 rounded-xl p-6 shadow-lg border-l-4 border-blue-500">
+              <h4 class="text-xl font-bold text-blue-700 mb-2">Infinite Recharge</h4>
+              <p class="text-blue-600 mb-2">Energy-themed game with power cell shooting and generator spinning mechanics.</p>
+              <div class="text-sm text-blue-500">
+                <i class="fas fa-battery-full mr-2"></i>Energy generation theme
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2021 - Infinite Recharge at Home -->
+        <div class="timeline-item relative flex items-center mb-16">
+          <div class="flex-1 pr-8 text-right">
+            <div class="bg-purple-50 rounded-xl p-6 shadow-lg border-r-4 border-purple-500">
+              <h4 class="text-xl font-bold text-purple-700 mb-2">Infinite Recharge at Home</h4>
+              <p class="text-purple-600 mb-2">Modified home-based challenges focusing on autonomous navigation and skills development.</p>
+              <div class="text-sm text-purple-500">
+                <i class="fas fa-home mr-2"></i>Home-based competition
+              </div>
+            </div>
+          </div>
+          <div class="absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-team-red rounded-full flex items-center justify-center text-white font-bold text-xl z-10">
+            21
+          </div>
+          <div class="flex-1 pl-8">
+            <!-- Empty space for alternating layout -->
+          </div>
+        </div>
+
+        <!-- 2022 - Rapid React -->
+        <div class="timeline-item relative flex items-center mb-16">
+          <div class="flex-1 pr-8 text-right">
+            <!-- Empty space for alternating layout -->
+          </div>
+          <div class="absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-team-purple rounded-full flex items-center justify-center text-white font-bold text-xl z-10">
+            22
+          </div>
+          <div class="flex-1 pl-8">
+            <div class="bg-red-50 rounded-xl p-6 shadow-lg border-l-4 border-red-500">
+              <h4 class="text-xl font-bold text-red-700 mb-2">Rapid React</h4>
+              <p class="text-red-600 mb-2">Hub-based cargo shooting game with climbing mechanics and defensive play options.</p>
+              <div class="text-sm text-red-500">
+                <i class="fas fa-bullseye mr-2"></i>Hub shooting mechanics
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2023 - Charged Up -->
+        <div class="timeline-item relative flex items-center mb-16">
+          <div class="flex-1 pr-8 text-right">
+            <div class="bg-cyan-50 rounded-xl p-6 shadow-lg border-r-4 border-cyan-500">
+              <h4 class="text-xl font-bold text-cyan-700 mb-2">Charged Up</h4>
+              <p class="text-cyan-600 mb-2">Grid-based scoring with cones and cubes, plus charging station balancing challenges.</p>
+              <div class="text-sm text-cyan-500">
+                <i class="fas fa-th mr-2"></i>Grid-based scoring
+              </div>
+            </div>
+          </div>
+          <div class="absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-team-red rounded-full flex items-center justify-center text-white font-bold text-xl z-10">
+            23
+          </div>
+          <div class="flex-1 pl-8">
+            <!-- Empty space for alternating layout -->
+          </div>
+        </div>
+
+        <!-- 2024 - Crescendo -->
+        <div class="timeline-item relative flex items-center mb-16">
+          <div class="flex-1 pr-8 text-right">
+            <!-- Empty space for alternating layout -->
+          </div>
+          <div class="absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-team-purple rounded-full flex items-center justify-center text-white font-bold text-xl z-10">
+            24
+          </div>
+          <div class="flex-1 pl-8">
+            <div class="bg-pink-50 rounded-xl p-6 shadow-lg border-l-4 border-pink-500">
+              <h4 class="text-xl font-bold text-pink-700 mb-2">Crescendo</h4>
+              <p class="text-pink-600 mb-2">Music-themed game with note shooting, amplification mechanics, and climbing harmonies.</p>
+              <div class="text-sm text-pink-500">
+                <i class="fas fa-music mr-2"></i>Musical theme
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2025 - Reefscape -->
+        <div class="timeline-item relative flex items-center mb-16">
+          <div class="flex-1 pr-8 text-right">
+            <div class="bg-teal-50 rounded-xl p-6 shadow-lg border-r-4 border-teal-500">
+              <h4 class="text-xl font-bold text-teal-700 mb-2">Reefscape</h4>
+              <p class="text-teal-600 mb-2">Marine-themed game focused on coral reef restoration with algae removal and ecosystem management challenges.</p>
+              <div class="text-sm text-teal-500">
+                <i class="fas fa-fish mr-2"></i>Marine ecosystem theme
+              </div>
+            </div>
+          </div>
+          <div class="absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-team-red rounded-full flex items-center justify-center text-white font-bold text-xl z-10">
+            25
+          </div>
+          <div class="flex-1 pl-8">
+            <!-- Empty space for alternating layout -->
+          </div>
+        </div>
+
+        <!-- 2026 - Rebuilt -->
+        <div class="timeline-item relative flex items-center mb-16">
+          <div class="flex-1 pr-8 text-right">
+            <!-- Empty space for alternating layout -->
+          </div>
+          <div class="absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-team-purple rounded-full flex items-center justify-center text-white font-bold text-xl z-10">
+            26
+          </div>
+          <div class="flex-1 pl-8">
+            <div class="bg-amber-50 rounded-xl p-6 shadow-lg border-l-4 border-amber-600">
+              <h4 class="text-xl font-bold text-amber-700 mb-2">Rebuilt</h4>
+              <p class="text-amber-600 mb-2">Archaeological-themed challenge where robots excavate, analyze, and reconstruct historical artifacts and discoveries.</p>
+              <div class="text-sm text-amber-500">
+                <i class="fas fa-hammer mr-2"></i>Archaeological exploration
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Achievements Section -->
+  <section id="achievements" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-team-black mb-6">Our Greatest Achievements</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Celebrating the milestones that define our journey and the recognition of our dedication to excellence.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Achievement 1 -->
+        <div class="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow duration-300">
+          <div class="bg-yellow-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-trophy text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-team-black mb-4">Regional Champions</h3>
+          <p class="text-gray-600 mb-4">Multiple regional championship victories showcasing consistent excellence in competition.</p>
+          <div class="text-team-purple font-semibold">2018, 2022, 2024</div>
+        </div>
+
+        <!-- Achievement 2 -->
+        <div class="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow duration-300">
+          <div class="bg-team-purple text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-medal text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-team-black mb-4">Engineering Excellence</h3>
+          <p class="text-gray-600 mb-4">Recognized for outstanding engineering design and innovative technical solutions.</p>
+          <div class="text-team-purple font-semibold">Innovation Awards</div>
+        </div>
+
+        <!-- Achievement 3 -->
+        <div class="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow duration-300">
+          <div class="bg-team-red text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-users text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-team-black mb-4">Community Impact</h3>
+          <p class="text-gray-600 mb-4">Extensive STEM outreach programs reaching thousands of students and community members.</p>
+          <div class="text-team-purple font-semibold">Chairman's Award Finalist</div>
+        </div>
+
+        <!-- Achievement 4 -->
+        <div class="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow duration-300">
+          <div class="bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-graduation-cap text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-team-black mb-4">Student Development</h3>
+          <p class="text-gray-600 mb-4">Over 200 students mentored with many pursuing STEM careers in engineering and technology.</p>
+          <div class="text-team-purple font-semibold">Legacy of Learning</div>
+        </div>
+
+        <!-- Achievement 5 -->
+        <div class="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow duration-300">
+          <div class="bg-blue-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-globe text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-team-black mb-4">World Championship</h3>
+          <p class="text-gray-600 mb-4">Multiple qualifications to the FIRST World Championship, competing at the highest level.</p>
+          <div class="text-team-purple font-semibold">Global Competition</div>
+        </div>
+
+        <!-- Achievement 6 -->
+        <div class="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow duration-300">
+          <div class="bg-purple-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-handshake text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-team-black mb-4">Gracious Professionalism</h3>
+          <p class="text-gray-600 mb-4">Embodying FIRST values through sportsmanship, collaboration, and respect for all teams.</p>
+          <div class="text-team-purple font-semibold">Core Values Recognition</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="py-20 bg-gradient-to-br from-team-purple to-team-purple-dark text-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-4xl md:text-5xl font-bold mb-6">Be Part of Our Legacy</h2>
+      <p class="text-xl text-purple-200 mb-8 max-w-3xl mx-auto">
+        Join Team #3323 Potential Energy and help us write the next chapter of our incredible journey. Together, we'll continue pushing the boundaries of innovation and inspiring the next generation of engineers.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <a href="index.html#contact" class="bg-white text-team-purple px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors duration-200 font-semibold text-lg inline-flex items-center">
+          <i class="fas fa-envelope mr-2"></i>
+          Join Our Team
+        </a>
+        <a href="index.html" class="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-team-purple transition-colors duration-200 font-semibold text-lg inline-flex items-center">
+          <i class="fas fa-home mr-2"></i>
+          Back to Home
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-team-black text-white py-16">
+    <div class="container mx-auto px-4">
+      <div class="grid md:grid-cols-3 gap-12 mb-12">
+        <!-- Team Info -->
+        <div>
+          <div class="flex items-center space-x-3 mb-6">
+            <img src="images/logo.png" alt="Potential Energy #3323 Logo" class="h-12 w-12">
+            <div>
+              <h3 class="text-2xl font-bold text-team-purple">Potential Energy</h3>
+              <p class="text-gray-400">#3323</p>
+            </div>
+          </div>
+          <p class="text-gray-300 leading-relaxed">
+            18 years of building the future through robotics competition, STEM education, and community engagement.
+          </p>
+        </div>
+        
+        <!-- Quick Links -->
+        <div>
+          <h3 class="text-xl font-bold mb-6 text-team-purple">Quick Links</h3>
+          <ul class="space-y-3">
+            <li><a href="index.html" class="text-gray-300 hover:text-white transition-colors duration-200">Home</a></li>
+            <li><a href="index.html#about" class="text-gray-300 hover:text-white transition-colors duration-200">About Us</a></li>
+            <li><a href="index.html#events" class="text-gray-300 hover:text-white transition-colors duration-200">Events</a></li>
+            <li><a href="innovation-lab.html" class="text-gray-300 hover:text-white transition-colors duration-200">Innovation Lab</a></li>
+            <li><a href="team-history.html" class="text-gray-300 hover:text-white transition-colors duration-200">Team History</a></li>
+          </ul>
+        </div>
+        
+        <!-- Social Media & Contact -->
+        <div>
+          <h3 class="text-xl font-bold mb-6 text-team-purple">Connect With Us</h3>
+          <div class="flex space-x-4 mb-6">
+            <a href="#" class="bg-team-purple hover:bg-team-purple-dark text-white w-12 h-12 rounded-full flex items-center justify-center transition-colors duration-200">
+              <i class="fab fa-instagram text-xl"></i>
+            </a>
+            <a href="#" class="bg-team-purple hover:bg-team-purple-dark text-white w-12 h-12 rounded-full flex items-center justify-center transition-colors duration-200">
+              <i class="fab fa-twitter text-xl"></i>
+            </a>
+            <a href="#" class="bg-team-purple hover:bg-team-purple-dark text-white w-12 h-12 rounded-full flex items-center justify-center transition-colors duration-200">
+              <i class="fab fa-youtube text-xl"></i>
+            </a>
+            <a href="#" class="bg-team-purple hover:bg-team-purple-dark text-white w-12 h-12 rounded-full flex items-center justify-center transition-colors duration-200">
+              <i class="fab fa-facebook text-xl"></i>
+            </a>
+          </div>
+          <div class="text-gray-300">
+            <p class="mb-2">
+              <i class="fas fa-envelope mr-2 text-team-purple"></i>
+              team@pe3323.com
+            </p>
+            <p>
+              <i class="fas fa-phone mr-2 text-team-purple"></i>
+              (555) 123-4567
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Copyright -->
+      <div class="border-t border-gray-700 pt-8 text-center">
+        <p class="text-gray-400">
+          © 2024 FRC Team #3323 Potential Energy. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Mobile menu functionality
+    document.getElementById('mobile-menu-button').addEventListener('click', function() {
+      const mobileMenu = document.getElementById('mobile-menu');
+      mobileMenu.classList.toggle('hidden');
+    });
+    
+    // Close mobile menu when clicking on links
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+      link.addEventListener('click', function() {
+        document.getElementById('mobile-menu').classList.add('hidden');
+      });
+    });
+
+    // Timeline animation on scroll
+    function animateTimeline() {
+      const timelineItems = document.querySelectorAll('.timeline-item');
+      
+      timelineItems.forEach(item => {
+        const rect = item.getBoundingClientRect();
+        const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+        
+        if (isVisible) {
+          item.classList.add('visible');
+        }
+      });
+    }
+
+    // Initial check and scroll listener
+    animateTimeline();
+    window.addEventListener('scroll', animateTimeline);
+  </script>
+
+</body>
+</html>
