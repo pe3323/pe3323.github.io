@@ -1,6 +1,457 @@
-<html>
-  <head/>
-  <body>
-    Coming soon, a new Potential Energy 3323 website.
-  </body>
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="FRC Team #3323 Potential Energy - Building the future through robotics competition, STEM education, and community engagement.">
+  <meta name="keywords" content="FRC, FIRST Robotics, Team 3323, Potential Energy, robotics competition, STEM education">
+  <meta name="author" content="FRC Team #3323 Potential Energy">
+  <link rel="icon" href="logo.ico" type="image/x-icon"> 
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'team-purple': '#5b21b6',
+            'team-purple-dark': '#4c1d95',
+            'team-purple-light': '#7c3aed',
+            'team-red': '#dc2626',
+            'team-black': '#0f0f0f',
+          },
+          fontFamily: {
+            'sans': ['Inter', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+  
+  <!-- Custom CSS for Carousel -->
+  <style>
+    .carousel-slide {
+      display: none;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    .carousel-slide.active {
+      display: block;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .carousel-indicator.active {
+      background-color: rgba(255, 255, 255, 1) !important;
+    }
+  </style>
+  
+  <title>FRC Team #3323 Potential Energy</title>
+</head>
+<body class="bg-white text-gray-900 font-sans">
+
+  <!-- Header -->
+  <header class="bg-white shadow-lg fixed top-0 w-full z-50">
+    <nav class="container mx-auto px-4 py-3">
+      <div class="flex items-center justify-between">
+        <!-- Logo and Team Name -->
+        <div class="flex items-center space-x-3">
+          <img src="images/logo.png" alt="Potential Energy #3323 Logo" class="h-10 w-10">
+          <div>
+            <h1 class="text-xl font-bold text-team-purple">Potential Energy</h1>
+            <p class="text-sm text-gray-600">#3323</p>
+          </div>
+        </div>
+        
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#home" class="text-gray-700 hover:text-team-purple transition-colors duration-200 font-medium">Home</a>
+          <a href="hundred-for-hundred.html" class="text-gray-700 hover:text-team-purple transition-colors duration-200 font-medium">100 for 100 Fundraiser</a>
+          <a href="#about" class="text-gray-700 hover:text-team-purple transition-colors duration-200 font-medium">About</a>
+          <a href="#events" class="text-gray-700 hover:text-team-purple transition-colors duration-200 font-medium">Events</a>
+          <a href="innovation-lab.html" class="text-gray-700 hover:text-team-purple transition-colors duration-200 font-medium">Innovation Lab</a>
+          <a href="team-history.html" class="text-gray-700 hover:text-team-purple transition-colors duration-200 font-medium">Team History</a>
+          <a href="#contact" class="bg-team-purple text-white px-6 py-2 rounded-lg hover:bg-team-purple-dark transition-colors duration-200 font-medium">Contact</a>
+        </div>
+        
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-button" class="md:hidden text-gray-700 hover:text-team-purple focus:outline-none">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
+      
+      <!-- Mobile Navigation -->
+      <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+        <div class="flex flex-col space-y-3">
+          <a href="#home" class="text-gray-700 hover:text-team-purple transition-colors duration-200 font-medium">Home</a>
+          <a href="hundred-for-hundred.html" class="text-gray-700 hover:text-team-purple transition-colors duration-200 font-medium">100 for 100 Fundraiser</a>
+          <a href="#about" class="text-gray-700 hover:text-team-purple transition-colors duration-200 font-medium">About</a>
+          <a href="#events" class="text-gray-700 hover:text-team-purple transition-colors duration-200 font-medium">Events</a>
+          <a href="innovation-lab.html" class="text-gray-700 hover:text-team-purple transition-colors duration-200 font-medium">Innovation Lab</a>
+          <a href="team-history.html" class="text-gray-700 hover:text-team-purple transition-colors duration-200 font-medium">Team History</a>
+          <a href="#contact" class="bg-team-purple text-white px-6 py-2 rounded-lg hover:bg-team-purple-dark transition-colors duration-200 font-medium text-center">Contact</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section with Carousel -->
+  <section id = "home" class="bg-gradient-to-br from-team-purple to-team-red text-white pt-24 pb-16 relative overflow-hidden">
+    <div class="container mx-auto px-4">
+      <!-- Carousel Container -->
+      <div id="hero-carousel" class="relative">
+        <!-- Slide 1: Main Call to Action -->
+        <div class="carousel-slide active text-center">
+          <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight border-gray-200">
+            Unleash Your<br>
+            <span class="text-yellow-300">Potential Energy</span>
+          </h1>
+          <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed">
+            A team of several passionate students and mentors<br>dedicated to making robots and having fun doing it!</p>
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a href="#about" class="bg-white text-team-purple px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors duration-200 font-semibold text-lg inline-flex items-center">
+              <i class="fas fa-rocket mr-2"></i>
+              Learn About Our Team
+            </a>
+            <a href="#events" class="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-team-purple transition-colors duration-200 font-semibold text-lg inline-flex items-center">
+              <i class="fas fa-calendar mr-2"></i>
+              Upcoming Events
+            </a>
+          </div>
+        </div>
+
+        <!-- Slide 2: Governors Cup
+        <div class="carousel-slide text-center">
+          <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+            <span class="text-yellow-300">Governors Cup</span>
+            <br>Champions
+          </h1>
+          <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed">
+            Celebrating our victory at the prestigious Governors Cup competition. Excellence in engineering, strategy, and teamwork drives our success on the field.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a href="#about" class="bg-yellow-300 text-team-purple px-8 py-4 rounded-lg hover:bg-yellow-200 transition-colors duration-200 font-semibold text-lg inline-flex items-center">
+              <i class="fas fa-trophy mr-2"></i>
+              View Our Achievements
+            </a>
+            <a href="#events" class="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-team-purple transition-colors duration-200 font-semibold text-lg inline-flex items-center">
+              <i class="fas fa-medal mr-2"></i>
+              Competition History
+            </a>
+          </div>
+      </div>
+    
+        <div class="carousel-slide text-center">
+          <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+            <span class="text-red-400">Decode</span>
+            <br>The Future
+          </h1>
+          <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed">
+            Breaking barriers in technology and innovation. Our team specializes in decoding complex challenges and engineering elegant solutions for tomorrow's world.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a href="#about" class="bg-team-red text-white px-8 py-4 rounded-lg hover:bg-red-700 transition-colors duration-200 font-semibold text-lg inline-flex items-center">
+              <i class="fas fa-code mr-2"></i>
+              Explore Our Tech
+            </a>
+            <a href="innovation-lab.html" class="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-team-purple transition-colors duration-200 font-semibold text-lg inline-flex items-center">
+              <i class="fas fa-cogs mr-2"></i>
+              Innovation Lab
+            </a>
+          </div>
+        </div>
+      </div>
+    -->
+      <div class="carousel-slide text-center">
+          <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+            100 for 100
+            <br> <span class = text-yellow-300>Fundraiser</span>
+          </h1>
+          <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed">
+          Want to sponsor us?<br>Right now we're looking for 100 sponsors 100 dollars each!</p>          
+          <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a href="hundred-for-hundred.html" class="bg-white text-team-purple px-8 py-4 rounded-lg hover:bg-red-700 transition-colors duration-200 font-semibold text-lg inline-flex items-center">
+              <i class="fas fa-money-bill mr-2"></i>
+              About Fundraiser
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carousel Navigation -->
+      <div class="absolute top-1/2 left-4 transform -translate-y-1/2">
+        <button id="prev-slide" class="bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition-colors duration-200">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+      </div>
+      <div class="absolute top-1/2 right-4 transform -translate-y-1/2">
+        <button id="next-slide" class="bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition-colors duration-200">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+
+      <!-- Carousel Indicators -->
+      <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-3">
+        <button class="carousel-indicator w-3 h-3 rounded-full bg-white/30 hover:bg-white/60 transition-colors duration-200" data-slide="0"></button>
+        <button class="carousel-indicator w-3 h-3 rounded-full bg-white/30 hover:bg-white/60 transition-colors duration-200" data-slide="1"></button>
+        </div>
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section id="about" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-team-black mb-6">About Potential Energy</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          We are a passionate team of students, mentors, and volunteers dedicated to excellence in robotics competition and STEM education.
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8 mb-16">
+        <!-- Mission Card -->
+        <div class="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow duration-300">
+          <div class="bg-team-purple text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-bullseye text-2xl"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-team-black mb-4">Our Mission</h3>
+          <p class="text-gray-600 leading-relaxed">
+            To inspire young people to be science and technology leaders by engaging them in exciting mentor-based programs that build science, engineering, and life skills.
+          </p>
+        </div>
+        
+        <!-- Innovation Card -->
+        <div class="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow duration-300">
+          <div class="bg-team-red text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-lightbulb text-2xl"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-team-black mb-4">Innovation</h3>
+          <p class="text-gray-600 leading-relaxed">
+            We push the boundaries of what's possible through creative problem-solving, cutting-edge technology, and collaborative engineering excellence.
+          </p>
+        </div>
+        
+        <!-- Community Card -->
+        <div class="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow duration-300">
+          <div class="bg-team-purple-light text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-users text-2xl"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-team-black mb-4">Community</h3>
+          <p class="text-gray-600 leading-relaxed">
+            Building lasting relationships and giving back to our community through STEM outreach, mentorship, and educational programs.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Upcoming Events Section -->
+  <section id="events" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-team-black mb-6">Upcoming Events</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Stay connected with our team activities, competitions, and community events.
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Event 1 -->
+        <div class="bg-gradient-to-br from-team-purple-light to-team-red border-gray-200 text-white rounded-xl shadow-lg overflow-hidden hover:shadow-x1 transition-shadow duration-300">
+          <div class="p-8">
+            <div class="flex items-center mb-4">
+              <i class="fas fa-venus text-yellow-300 text-2xl mr-3"></i>
+              <h3 class="text-xl font-bold">Girls Behind the Glass</h3>
+            </div>
+            <p class="text-purple-100 mb-4">An event highlighting female drivers hosted by Team 319, empowering women everywhere to be leaders in technology.</p>
+            <div class="flex items-center text-purple-200">
+              <i class="fas fa-calendar mr-2"></i>
+              <span>November 2nd 2025</span>
+            </div>
+            <div class="flex items-center text-purple-200 mt-2">
+              <i class="fas fa-map-marker-alt mr-2"></i>
+              <span>Prospect Mountain High School</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Event 2 -->
+        <div class="bg-white border-2 border-gray-200 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+          <div class="p-8">
+            <div class="flex items-center mb-4">
+              <i class="fas fa-tools text-team-purple text-2xl mr-3"></i>
+              <h3 class="text-xl font-bold text-team-black">Team Workshops</h3>
+            </div>
+            <p class="text-gray-600 mb-4">Weekly hands-on workshops covering robot design, programming, project management, and essential STEM skills.</p>
+            <div class="flex items-center text-gray-500">
+              <i class="fas fa-calendar mr-2"></i>
+              <span>Every Saturday</span>
+            </div>
+            <div class="flex items-center text-gray-500 mt-2">
+              <i class="fas fa-map-marker-alt mr-2"></i>
+              <span>School Lab</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Event 3 -->
+        <div class="bg-white border-2 border-gray-200 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+          <div class="p-8">
+            <div class="flex items-center mb-4">
+              <i class="fas fa-graduation-cap text-team-red text-2xl mr-3"></i>
+              <h3 class="text-xl font-bold text-team-black">STEM Outreach</h3>
+            </div>
+            <p class="text-gray-600 mb-4">Community outreach program introducing younger students to robotics and STEM careers through interactive demonstrations.</p>
+            <div class="flex items-center text-gray-500">
+              <i class="fas fa-calendar mr-2"></i>
+              <span>Monthly Events</span>
+            </div>
+            <div class="flex items-center text-gray-500 mt-2">
+              <i class="fas fa-map-marker-alt mr-2"></i>
+              <span>Local Schools</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact" class="bg-team-black text-white py-16">
+    <div class="container mx-auto px-4">
+      <div class="grid md:grid-cols-3 gap-12 mb-12">
+        <!-- Team Info -->
+        <div>
+          <div class="flex items-center space-x-3 mb-6">
+            <img src="images/logo.png" alt="Potential Energy #3323 Logo" class="h-12 w-12">
+            <div>
+              <h3 class="text-2xl font-bold text-team-purple">Potential Energy</h3>
+              <p class="text-gray-400">#3323</p>
+            </div>
+          </div>
+          <p class="text-grey-300 leading-relaxed">
+                Building the future through robotics competition, STEM education, and community engagement. Join us in transforming ideas into reality.
+          </p>
+        </div>
+        
+        <!-- Quick Links -->
+        <div>
+          <h3 class="text-xl font-bold mb-6 text-team-purple">Quick Links</h3>
+          <ul class="space-y-3">
+            <li><a href="#about" class="text-gray-300 hover:text-white transition-colors duration-200">About Us</a></li>
+            <li><a href="#events" class="text-gray-300 hover:text-white transition-colors duration-200">Events</a></li>
+            <li><a href="innovation-lab.html" class="text-gray-300 hover:text-white transition-colors duration-200">Innovation Lab</a></li>
+            <li><a href="team-history.html" class="text-gray-300 hover:text-white transition-colors duration-200">Team History</a></li>
+            <li><a href="mailto:pe3323@gmail.com" class="text-gray-300 hover:text-white transition-colors duration-200">Contact</a></li>
+           </ul>
+        </div>
+        
+        <!-- Social Media & Contact -->
+        <div>
+          <h3 class="text-xl font-bold mb-6 text-team-purple">Connect With Us</h3>
+          <div class="flex space-x-4 mb-6">
+            <a href="https://www.instagram.com/frc3323" class="bg-team-purple hover:bg-team-purple-dark text-white w-12 h-12 rounded-full flex items-center justify-center transition-colors duration-200">
+              <i class="fab fa-instagram text-xl"></i>
+            </a>
+            <a href="https://www.tiktok.com/@frc3323" class="bg-team-purple hover:bg-team-purple-dark text-white w-12 h-12 rounded-full flex items-center justify-center transition-colors duration-200">
+              <i class="fab fa-tiktok text-xl"></i>
+            </a>
+            <a href="#" class="bg-team-purple hover:bg-team-purple-dark text-white w-12 h-12 rounded-full flex items-center justify-center transition-colors duration-200">
+              <i class="fab fa-facebook text-xl"></i>
+            </a>
+          </div>
+          <div class="text-gray-300">
+            <p class="mb-2">
+              <i class="fas fa-envelope mr-2 text-team-purple"></i>
+              pe3323@gmail.com
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Copyright -->
+      <div class="border-t border-gray-700 pt-8 text-center">
+        <p class="text-gray-400">
+          © 2025 FRC Team #3323 Potential Energy. All rights reserved. | 
+          <a href="#" class="text-team-purple hover:text-team-purple-light transition-colors duration-200">Privacy Policy</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript for mobile menu and carousel -->
+  <script>
+    // Mobile menu functionality
+    document.getElementById('mobile-menu-button').addEventListener('click', function() {
+      const mobileMenu = document.getElementById('mobile-menu');
+      mobileMenu.classList.toggle('hidden');
+    });
+    
+    // Close mobile menu when clicking on links
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+      link.addEventListener('click', function() {
+        document.getElementById('mobile-menu').classList.add('hidden');
+      });
+    });
+
+    // Carousel functionality
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel-slide');
+    const indicators = document.querySelectorAll('.carousel-indicator');
+    const totalSlides = slides.length;
+
+    function showSlide(index) {
+      // Hide all slides
+      slides.forEach(slide => slide.classList.remove('active'));
+      indicators.forEach(indicator => indicator.classList.remove('active'));
+      
+      // Show current slide
+      slides[index].classList.add('active');
+      indicators[index].classList.add('active');
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+      currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+      showSlide(currentSlide);
+    }
+
+    // Event listeners for navigation buttons
+    document.getElementById('next-slide').addEventListener('click', nextSlide);
+    document.getElementById('prev-slide').addEventListener('click', prevSlide);
+
+    // Event listeners for indicators
+    indicators.forEach((indicator, index) => {
+      indicator.addEventListener('click', () => {
+        currentSlide = index;
+        showSlide(currentSlide);
+      });
+    });
+
+    // Auto-advance carousel every 5 seconds
+    setInterval(nextSlide, 5000);
+
+    // Keyboard navigation
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'ArrowLeft') prevSlide();
+      if (e.key === 'ArrowRight') nextSlide();
+    });
+  </script>
+
+</body>
 </html>
