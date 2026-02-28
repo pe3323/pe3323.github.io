@@ -57,7 +57,6 @@ html, body{
     color: white;
     border-color: white;
     border-width: 4px;
-    background-color: black; fp
 }
 
 #qrHeader1, #qrHeader2 {
@@ -157,11 +156,9 @@ h2{
 #nextButton1, #nextButton2, #nextButton9, #nextButton10, .clearForm, .submitForm, #displayButton, #copyButton {
     font-family: Alexis;
     padding: 10px;
-    background-color: black;
-    color: white;
+    background-color: rgb(151, 199, 240);
     text-decoration: none;
     display: inline-block;
-    border-color:white
 }
 
 #nextButton3, #nextButton4, #nextButton5, #nextButton6, #nextButton7, #nextButton8 {
@@ -181,9 +178,7 @@ h2{
 
 #prevButton7, #prevButton8, #prevButton9{
     font-family: Alexis;
-    background-color: black;
-    color:white;
-    border-color: white;
+    background-color: rgb(151, 199, 240);
     padding: 10px;
 }
 
@@ -198,7 +193,6 @@ h2{
 #prematch_table{
     font: Alexis;
     text-align: center;
-    background-color: black;
 }
 
 
